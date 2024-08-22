@@ -57,41 +57,6 @@ Socket programming finds applications in various domains, including web developm
 # DEVELOPED BY KAVI M S
 # REGISTER NO: 212223220044
 
-## Client:
-```
-import socket
-s=socket.socket()
-s.bind(('localhost',8000))
-s.listen(5)
-c,addr=s.accept()
-while True:
-i=input("Enter a data: ")
-c.send(i.encode())
-ack=c.recv(1024).decode()
-if ack:
-print(ack)
-continue
-else:
-c.close()
-break
-```
-
-## Server:
-```
-import socket
-s=socket.socket()
-s.connect(('localhost',8000))
-while True:
- print(s.recv(1024).decode())
- s.send("Acknowledgement Recived".encode())
-```
-
-## OUTPUT:
-## CLIENT:
-![Screenshot 2024-08-22 110626](https://github.com/user-attachments/assets/f0ac9204-1258-4816-b45f-a7f73a671232)
-
-## SERVER:
-![Screenshot 2024-08-22 110643](https://github.com/user-attachments/assets/20863dbf-2776-4001-afd7-3db8620d9db5)
 
 
 
